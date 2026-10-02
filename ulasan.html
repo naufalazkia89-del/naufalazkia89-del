@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulasan - Kost Salatiga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BANNER HEADER BERGERAK -->
+  <div class="marquee-banner">
+    <div class="marquee-text">
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+    </div>
+  </div>
+
+  <header>
+    <h1>KostSalatiga</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="daftar.html">Daftar Kost</a>
+      <a href="ulasan.html" class="active">Ulasan</a>
+      <a href="kontak.html">Hubungi Kami</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h3 class="section-title">Ulasan Penghuni & Pencari Kost</h3>
+    <p style="color: var(--text-muted); margin-bottom: 24px; max-width: 520px;">
+      Baca pengalaman nyata dari para penyewa. Ulasan jujur membantu kamu memilih
+      kost yang paling cocok sebelum memutuskan.
+    </p>
+
+    <!-- FORM KIRIM ULASAN -->
+    <section class="review-form-section">
+      <h4>Tulis Ulasan Anda</h4>
+      <form id="reviewForm" onsubmit="tambahUlasan(event)">
+        <input type="text" id="reviewNama" placeholder="Nama Anda" required>
+        <select id="reviewKost" required>
+          <option value="">-- Pilih Kost --</option>
+          <option value="Arjuna Kost">Arjuna Kost</option>
+          <option value="Griya Bunda">Griya Bunda</option>
+          <option value="Kost Putri Nana FISA">Kost Putri Nana FISA</option>
+          <option value="Kost Putri Rosita">Kost Putri Rosita</option>
+          <option value="Kost Putri Alifa">Kost Putri Alifa</option>
+          <option value="Kost Graha Asri">Kost Graha Asri</option>
+          <option value="Kost Campus Residence">Kost Campus Residence</option>
+          <option value="Kost Green House">Kost Green House</option>
+          <option value="Kost Wisma Cinta">Kost Wisma Cinta</option>
+          <option value="Kost Barokah Sejahtera">Kost Barokah Sejahtera</option>
+        </select>
+        <label style="font-size: 0.88rem; color: #64748b; margin-bottom: 4px; display: block;">Beri Rating:</label>
+        <div id="starPicker" class="star-picker"></div>
+        <textarea id="reviewPesan" rows="4" placeholder="Tuliskan pengalaman atau pendapat Anda..." required></textarea>
+        <button type="submit" class="btn-submit">Kirim Ulasan</button>
+      </form>
+    </section>
+
+    <!-- LIST ULASAN -->
+    <section class="reviews-list" id="reviewsContainer">
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Rizky A.</strong>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Arjuna Kost</strong> · 2 bulan lalu</small>
+        <p>"Akses ke kampus dekat sekali, tempatnya tenang buat belajar. Bapak kostnya juga sangat ramah. Wi-Fi stabil bahkan malam hari. Recommended banget buat mahasiswa!"</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Siti Nurhaliza</strong>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Kost Putri Nana FISA</strong> · 1 bulan lalu</small>
+        <p>"Fasilitas lengkap banget, ada dapur bersama dan Wi-Fi kencang. Sangat cocok buat mahasiswi! Lingkungan aman dan tetangga kostnya baik-baik. Harganya juga worth it."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Andi Pratama</strong>
+          <span class="stars">⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Kost Campus Residence</strong> · 3 minggu lalu</small>
+        <p>"Kamarnya bersih, AC dingin, dan CCTV bikin tenang. Dekat jalan utama jadi gampang cari makan. Depositnya juga wajar. Cuma kadang parkir agak penuh di jam sibuk."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Dewi Lestari</strong>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Kost Putri Rosita</strong> · 1 minggu lalu</small>
+        <p>"Harga terjangkau tapi fasilitasnya lengkap: listrik & air gratis, mesin cuci, dapur. Ibu kostnya seperti orang tua sendiri. Cocok buat mahasiswi yang hemat tapi tetap nyaman."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Budi Santoso</strong>
+          <span class="stars">⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Griya Bunda</strong> · 1 bulan lalu</small>
+        <p>"Parkir motor luas dan aman. Kamar mandi dalam bersih. Lokasi Sraten cukup strategis. Suasananya tenang, cocok buat istirahat setelah kuliah seharian."</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <strong>Maya Putri</strong>
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <small>Penyewa di <strong>Kost Putri Alifa</strong> · 2 minggu lalu</small>
+        <p>"Kamar mewah, Wi-Fi kencang, dekat kampus. Pembayaran rutin tiap tanggal 1 memudahkan. Tidak boleh bawa hewan peliharaan juga bikin lingkungan lebih bersih. Suka sekali!"</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Kost<span>Salatiga</span></h2>
+        <p>Cari tempat tinggal nyaman di Salatiga dengan mudah dan sesuai kebutuhanmu.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Hubungi Kami</h3>
+        <p>📍 Salatiga, Jawa Tengah</p>
+        <p>📱 0895-3606-45877</p>
+        <p>✉️ kostsalatiga@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <strong>KostSalatiga</strong> · Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <div class="bottom-nav">
+    <a href="index.html">Beranda</a>
+    <a href="daftar.html">Daftar Kost</a>
+    <a href="ulasan.html" class="active">Ulasan</a>
+    <a href="kontak.html">Hubungi Kami</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

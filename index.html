@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KostSalatiga - Cari Tempat Tinggal Nyaman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR / HEADER -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Kost<span>Salatiga</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="daftar.html">Daftar Kost</a>
+        <a href="ulasan.html">Ulasan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTAINER UTAMA -->
+  <main class="container">
+    
+    <!-- 1. HERO & SEARCH SECTION (WALLPAPER BANNER) -->
+    <section class="hero-wallpaper-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2>Cari Tempat Tinggal Nyaman di Salatiga</h2>
+        <p>Temukan kost Terbaikmu di sekitar kampus dan pusat Kota Salatiga.</p>
+        
+        <!-- SEARCH BOX -->
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Cari berdasarkan nama kost, lokasi, atau fasilitas..." onkeyup="cariKost()">
+          <button class="btn-search" onclick="cariKost()">Cari</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SECTION DAFTAR KOST -->
+    <section class="kost-section">
+      <div class="section-title">
+        <h3>Daftar Kost Populer</h3>
+        <p>Rekomendasi tempat tinggal terbaik dengan lokasi strategis</p>
+      </div>
+
+      <!-- GRID CARDS KOST -->
+      <div class="kost-grid" id="kostList">
+        
+        <!-- CARD KOST 1 -->
+        <article class="kost-card" data-title="kost amanah blotongan putri wifi">
+          <div class="card-badge">Putri</div>
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="Kost Amanah">
+          </div>
+          <div class="card-body">
+            <h4 class="kost-title">Kost Amanah Blotongan</h4>
+            <p class="kost-location">📍 Blotongan, Sidorejo, Salatiga</p>
+            <ul class="kost-facilities">
+              <li>WiFi Fast</li>
+              <li>Kamar Mandi Dalam</li>
+              <li>Kasur & Lemari</li>
+            </ul>
+            <div class="card-footer">
+              <div class="kost-price">
+                <span>Rp 650.000</span> / bulan
+              </div>
+              <button class="btn-order" onclick="pesanKost('Kost Amanah Blotongan')">Pesan</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD KOST 2 -->
+        <article class="kost-card" data-title="kost graha aksara putra wifi">
+          <div class="card-badge badge-putra">Putra</div>
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80" alt="Kost Graha Aksara">
+          </div>
+          <div class="card-body">
+            <h4 class="kost-title">Kost Graha Aksara</h4>
+            <p class="kost-location">📍 Near UKSW, Tingkir, Salatiga</p>
+            <ul class="kost-facilities">
+              <li>Free Electricity</li>
+              <li>Dapur Bersama</li>
+              <li>Parkir Luas</li>
+            </ul>
+            <div class="card-footer">
+              <div class="kost-price">
+                <span>Rp 550.000</span> / bulan
+              </div>
+              <button class="btn-order" onclick="pesanKost('Kost Graha Aksara')">Pesan</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD KOST 3 -->
+        <article class="kost-card" data-title="kost mawar asri umum bebas">
+          <div class="card-badge badge-umum">Bebas / Umum</div>
+          <div class="card-img">
+            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80" alt="Kost Mawar Asri">
+          </div>
+          <div class="card-body">
+            <h4 class="kost-title">Kost Mawar Asri</h4>
+            <p class="kost-location">📍 Sidomukti, Kota Salatiga</p>
+            <ul class="kost-facilities">
+              <li>AC / Non-AC</li>
+              <li>CCTV 24 Jam</li>
+              <li>Bebas Jam Malam</li>
+            </ul>
+            <div class="card-footer">
+              <div class="kost-price">
+                <span>Rp 800.000</span> / bulan
+              </div>
+              <button class="btn-order" onclick="pesanKost('Kost Mawar Asri')">Pesan</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL PEMESANAN IDENTITAS -->
+  <div id="loginModal" class="modal-overlay">
+    <div class="modal-box">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3>Isi Identitas Pemesan</h3>
+      <p>Lengkapi data sebelum diarahkan ke WhatsApp Admin.</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="userNama">Nama Lengkap</label>
+          <input type="text" id="userNama" placeholder="Masukkan nama Anda" required>
+        </div>
+        <div class="form-group">
+          <label for="userHp">Nomor WhatsApp</label>
+          <input type="tel" id="userHp" placeholder="08xxxxxxxxxx" required>
+        </div>
+        <button type="submit" class="btn-submit">Lanjutkan ke WhatsApp ➔</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Kost<span>Salatiga</span></h2>
+        <p>
+          Cari tempat tinggal nyaman di Salatiga
+          dengan mudah dan sesuai kebutuhanmu.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>Hubungi Kami</h3>
+        <p>📍 Salatiga, Jawa Tengah</p>
+        <p>📱 0895-3606-45877</p>
+        <p>✉️ kostsalatiga@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <strong>KostSalatiga</strong> · Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- BOTTOM NAV (MOBILE) -->
+  <div class="bottom-nav">
+    <a href="index.html" class="active">Beranda</a>
+    <a href="daftar.html">Daftar Kost</a>
+    <a href="ulasan.html">Ulasan</a>
+    <a href="kontak.html">Hubungi Kami</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

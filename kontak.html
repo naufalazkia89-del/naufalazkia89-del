@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami - KostSalatiga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- BANNER HEADER BERGERAK -->
+  <div class="marquee-banner">
+    <div class="marquee-text">
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+    </div>
+  </div>
+
+  <header>
+    <h1>KostSalatiga</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="daftar.html">Daftar Kost</a>
+      <a href="ulasan.html">Ulasan</a>
+      <a href="kontak.html" class="active">Hubungi Kami</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h3 class="section-title">Hubungi Kami</h3>
+    <p style="color: var(--text-muted); margin-bottom: 28px; max-width: 560px;">
+      Ada pertanyaan seputar kost, ketersediaan kamar, atau ingin survey lokasi?
+      Silakan hubungi kami melalui form di bawah atau langsung chat WhatsApp admin.
+    </p>
+
+    <div class="contact-section">
+      <!-- INFO CARD -->
+      <div class="contact-info-card">
+        <h4>Butuh Bantuan Cepat?</h4>
+        <p>
+          Tim admin KostSalatiga siap membantu kamu menemukan tempat tinggal
+          yang nyaman, aman, dan sesuai budget.
+        </p>
+        <div class="contact-detail">
+          <span>📍</span>
+          <div>Salatiga, Jawa Tengah</div>
+        </div>
+        <div class="contact-detail">
+          <span>📱</span>
+          <div>0895-3606-45877</div>
+        </div>
+        <div class="contact-detail">
+          <span>✉️</span>
+          <div>kostsalatiga@gmail.com</div>
+        </div>
+        <div class="contact-detail">
+          <span>🕒</span>
+          <div>Senin – Minggu · 08.00 – 21.00 WIB</div>
+        </div>
+      </div>
+
+      <!-- FORM CARD -->
+      <div class="contact-form-card">
+        <h4>Kirim Pesan ke Admin</h4>
+        <form id="contactForm" onsubmit="kirimPesanWA(event)">
+          <input type="text" id="contactNama" placeholder="Nama Lengkap" required>
+          <input type="tel" id="contactHp" placeholder="Nomor WhatsApp (08xxxxxxxxxx)" required>
+          <textarea id="contactPesan" rows="5" placeholder="Tulis pertanyaan atau pesan Anda di sini..." required></textarea>
+          <button type="submit" class="btn-submit">Kirim via WhatsApp ➔</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Kost<span>Salatiga</span></h2>
+        <p>
+          Cari tempat tinggal nyaman di Salatiga
+          dengan mudah dan sesuai kebutuhanmu.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>Hubungi Kami</h3>
+        <p>📍 Salatiga, Jawa Tengah</p>
+        <p>📱 0895-3606-45877</p>
+        <p>✉️ kostsalatiga@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <strong>KostSalatiga</strong> · Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- BOTTOM NAVIGATION (MOBILE) -->
+  <div class="bottom-nav">
+    <a href="index.html">Beranda</a>
+    <a href="daftar.html">Daftar Kost</a>
+    <a href="ulasan.html">Ulasan</a>
+    <a href="kontak.html" class="active">Hubungi Kami</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

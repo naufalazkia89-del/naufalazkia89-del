@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Kost Salatiga</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- BANNER HEADER BERGERAK -->
+  <div class="marquee-banner">
+    <div class="marquee-text">
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+      <span> KOS AREA SALATIGA </span>
+    </div>
+  </div>
+
+  <header>
+    <h1>KostSalatiga</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="daftar.html" class="active">Daftar Kost</a>
+      <a href="ulasan.html">Ulasan</a>
+      <a href="kontak.html">Hubungi Kami</a>
+    </nav>
+  </header>
+  
+
+  <main class="container">
+    <h3 class="section-title">Daftar Kost Salatiga</h3>
+
+    <div class="kost-grid">
+
+      <!-- 1. ARJUNA KOST -->
+      <div class="kost-card">
+        <img src="foto arjuna.jpg" class="kost-img" alt="Arjuna Kost">
+        <div class="kost-body">
+          <h4 class="kost-title">1. ARJUNA KOST</h4>
+          <div class="kost-price">Rp550.000 / bulan</div>
+          <div class="kost-location">📍 Jl. Lkr. Sel. Salatiga, Brajan, Blotongan, Kec. Sidorejo, Kota Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kamar mandi dalam, kasur, kipas angin, lemari, Wi-Fi, akses dekat kampus.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Dilarang merokok di koridor, batas jam malam pukul 22.00 WIB.</div>
+          <a href="https://maps.google.com/?q=Blotongan+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('ARJUNA KOST')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 2. GRIYA BUNDA -->
+      <div class="kost-card">
+        <img src="gr.jpg" class="kost-img" alt="Griya Bunda">
+        <div class="kost-body">
+          <h4 class="kost-title">2. GRIYA BUNDA</h4>
+          <div class="kost-price">Rp600.000 / bulan</div>
+          <div class="kost-location">📍 Sraten, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kamar mandi dalam, kasur, lemari pakaian, parkir motor luas.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Bebas listrik standar, menjaga ketenangan lingkungan.</div>
+          <a href="https://maps.google.com/?q=Sraten+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('GRIYA BUNDA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 3. KOST PUTRI NANA FISA -->
+      <div class="kost-card">
+        <img src="foto KOST PUTRI NANA FISA.jpg" class="kost-img" alt="Kost Putri Nana FISA">
+        <div class="kost-body">
+          <h4 class="kost-title">3. KOST PUTRI NANA FISA</h4>
+          <div class="kost-price">Rp500.000 – Rp600.000 / bulan</div>
+          <div class="kost-location">📍 Jl. Sehati Raya 1, Blotongan, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kipas, kaca, lemari, meja + kursi, kasur + bantal + sprei, dapur bersama, rak sepatu, kamar mandi, Wi-Fi.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Khusus putri, wajib melampirkan foto KTP.</div>
+          <a href="https://maps.google.com/?q=Blotongan+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST PUTRI NANA FISA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 4. KOST PUTRI ROSITA -->
+      <div class="kost-card">
+        <img src="rs.jpg" class="kost-img" alt="Kost Putri Rosita">
+        <div class="kost-body">
+          <h4 class="kost-title">4. KOST PUTRI ROSITA</h4>
+          <div class="kost-price">Rp400.000 / bulan</div>
+          <div class="kost-location">📍 Kecandran, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Wifi, listrik & air gratis, dapur, mesin cuci, kasur, lemari lengkap.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Khusus putri/mahasiswi, jam menginap tamu dibatasi.</div>
+          <a href="https://maps.google.com/?q=Kecandran+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST PUTRI ROSITA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 5. KOST PUTRI ALIFA -->
+      <div class="kost-card">
+        <img src="al.jpg" class="kost-img" alt="Kost Putri Alifa">
+        <div class="kost-body">
+          <h4 class="kost-title">5. KOST PUTRI ALIFA</h4>
+          <div class="kost-price">Rp830.000 / bulan</div>
+          <div class="kost-location">📍 Jl. Sultan Agung, Blotongan Kec. Sidorejo, Kota Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kamar mandi dalam, kasur, lemari, Wi-Fi, akses dekat kampus.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Tidak boleh membawa hewan peliharaan, pembayaran tiap tanggal 1.</div>
+          <a href="https://maps.google.com/?q=Sultan+Agung+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST PUTRI ALIFA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 6. KOST GRAHA ASRI SALATIGA -->
+      <div class="kost-card">
+        <img src="https://picture.rumah123.com/r123-images/720x420-crop/customer/2022680/2024-07-10-02-43-29-511c4071-d928-48fe-8e74-44d1b1bfa317.jpg" class="kost-img" alt="Kost Graha Asri">
+        <div class="kost-body">
+          <h4 class="kost-title">6. KOST GRAHA ASRI</h4>
+          <div class="kost-price">Rp650.000 / bulan</div>
+          <div class="kost-location">📍 Sidorejo Lor, Kec. Sidorejo, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kamar mandi luar/dalam, Wi-Fi, kasur springbed, lemari pakaian, jemuran bersama.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Menjaga ketenangan, batas bertamu jam 21.00 WIB.</div>
+          <a href="https://maps.google.com/?q=Sidorejo+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST GRAHA ASRI')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 7. KOST CAMPUS RESIDENCE -->
+      <div class="kost-card">
+        <img src="https://lokanesia.com/wp-content/uploads/2022/02/Kost-Putera-D-99.jpg" class="kost-img" alt="Kost Campus Residence">
+        <div class="kost-body">
+          <h4 class="kost-title">7. KOST CAMPUS RESIDENCE</h4>
+          <div class="kost-price">Rp750.000 / bulan</div>
+          <div class="kost-location">📍 Jl. Diponegoro, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> AC/Kipas, kamar mandi dalam, meja belajar, Wi-Fi kencang, cctv 24 jam.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Dilarang membawa barang berbahaya, deposit 100rb di awal.</div>
+          <a href="https://maps.google.com/?q=Diponegoro+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST CAMPUS RESIDENCE')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 8. KOST GREEN HOUSE SALATIGA -->
+      <div class="kost-card">
+        <img src="https://rumah.dijual.co.id/uploads/images/2022/05/193802/rumah-kos-full-furnished-di-pusat-kota-salatiga-2QYNAEDM.jpg" class="kost-img" alt="Kost Green House">
+        <div class="kost-body">
+          <h4 class="kost-title">8. KOST GREEN HOUSE</h4>
+          <div class="kost-price">Rp450.000 / bulan</div>
+          <div class="kost-location">📍 Tingkir Tengah, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kasur, lemari, kamar mandi luar, air sumur bersih, parkir aman.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Wajib ikut menjaga kebersihan area bersama.</div>
+          <a href="https://maps.google.com/?q=Tingkir+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST GREEN HOUSE')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 9. KOST WISMA CINTA -->
+      <div class="kost-card">
+        <img src="https://th.bing.com/th/id/OIP.LEflbYm-XnhDS6lG1016DAHaFj?w=207&h=180&c=7&r=0&o=7&pid=1.7&rm=3" class="kost-img" alt="Kost Wisma Cinta">
+        <div class="kost-body">
+          <h4 class="kost-title">9. KOST WISMA CINTA</h4>
+          <div class="kost-price">Rp500.000 / bulan</div>
+          <div class="kost-location">📍 Argomulyo, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kasur, lemari, Wi-Fi gratis, kamar mandi luar, dapur umum.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Khusus mahasiswa/karyawan baik-baik, bayar tepat waktu.</div>
+          <a href="https://maps.google.com/?q=Argomulyo+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST WISMA CINTA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+      <!-- 10. KOST BAROKAH SEJAHTERA -->
+      <div class="kost-card">
+        <img src="https://static.mamikos.com/uploads/cache/data/style/2024-07-21/WniS1vhP.-360x480.jpg" class="kost-img" alt="Kost Barokah Sejahtera">
+        <div class="kost-body">
+          <h4 class="kost-title">10. KOST BAROKAH SEJAHTERA</h4>
+          <div class="kost-price">Rp550.000 / bulan</div>
+          <div class="kost-location">📍 Pulutan, Kec. Sidorejo, Salatiga</div>
+          <div class="kost-facilities"><strong>Fasilitas:</strong> Kamar mandi dalam, Wi-Fi, tempat jemur, kasur, lemari.</div>
+          <div class="kost-rules"><strong>Syarat & Ketentuan:</strong> Dilarang membuat kegaduhan malam hari.</div>
+          <a href="https://maps.google.com/?q=Pulutan+Salatiga" target="_blank" class="maps-link">📍 Google Maps</a>
+          <button class="btn-pesan" onclick="pesanKost('KOST BAROKAH SEJAHTERA')">Pesan Sekarang</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL LOGIN SEMENTARA -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-box">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h3>Login / Identitas</h3>
+      <p>Silakan masukkan nama dan WhatsApp Anda untuk melanjutkan pemesanan ke admin.</p>
+      <form id="loginForm">
+        <input type="text" id="userNama" placeholder="Nama Lengkap" required>
+        <input type="tel" id="userHp" placeholder="Nomor WhatsApp Anda" required>
+        <button type="submit" class="btn-login">Lanjut ke WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Kost<span>Salatiga</span></h2>
+        <p>
+          Cari tempat tinggal nyaman di Salatiga
+          dengan mudah dan sesuai kebutuhanmu.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>Hubungi Kami</h3>
+        <p>📍 Salatiga, Jawa Tengah</p>
+        <p>📱 0895-3606-45877</p>
+        <p>✉️ kostsalatiga@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <strong>KostSalatiga</strong> · Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- BOTTOM NAVIGATION (MOBILE) -->
+  <div class="bottom-nav">
+    <a href="index.html">Beranda</a>
+    <a href="daftar.html" class="active">Daftar Kost</a>
+    <a href="ulasan.html">Ulasan</a>
+    <a href="kontak.html">Hubungi Kami</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
