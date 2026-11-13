@@ -36,7 +36,7 @@ Fokus         : Backend, Sistem, & Problem Solving
 
 Sedang belajar: Terus upgrade skill setiap hari
 
-Prinsip       : "Kerja rapi, kode efisien."
+Prinsip       : "Kerja rapi kode efisien."
 
 Status        : Online 🟢
 
